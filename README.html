@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Installation Instructions - Online Photo Frames v.1.0</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style>	
+	.align-center {
+		text-align:center;
+	}
+	.header-bg-td {
+		background-image:url(images/header-bg.jpg);
+		background-repeat:repeat-x;
+		background-position:top;
+		width:100%;
+	}
+	img {
+		border:0px;
+	}
+	.header {
+		border:2px solid black;
+	}
+	.frame-name {
+		border:1px solid black;
+		background-color:#CCCCCC;
+		font-size:13px;
+		font-family:Verdana, Arial, Helvetica, sans-serif;
+		margin-top:3px;
+		padding:1px;
+		padding-right:20px;
+		padding-left:20px;
+	}
+	body {
+		background-color:#ECECEC;
+	}
+	h1 {
+		margin-bottom:0px;
+		margin-top:0px;
+		border-bottom:1px solid black;
+	}
+	.right-td-div {
+		border:1px solid silver;
+		background-color:#FAFAFA;
+		padding:10px;
+		margin:5px;
+	}
+	.green-ul li {
+		border:1px solid green;
+		background-color:#F3FFF2;
+		padding:2px;
+		margin-bottom:5px;
+	}
+	h2 {
+		margin-top:5px;
+		text-decoration:underline;
+	}
+</style>
+</head>
+
+<body>
+<div class="header">
+	<table cellpadding="0" cellspacing="0">
+		<tr>
+			<td><a href="http://www.photoshop-tutorial-guide.com"><img src="images/top-logo.jpg" alt="Photoshop Tutorial Guide Logo" /></a></td>
+			<td class="header-bg-td"><img src="images/spacer.gif" alt="spacer" height="3" /></td>
+		</tr>
+	</table>
+	</div><br />
+	<h1>Installation Instructions for Online Photo Frames v.1.0</h1>
+	<p>If you're reading this, you've already downloaded Online Photo Frames and unzipped it, which is the hard part. Installing Online Photo Frames is easy. Once the files are on a live server come back to this page and <strong>visit <a href="example.php">the example page</a></strong>, where you can preview your code in any of the frame styles. Just take the following steps:</p>
+	<ol>
+		<li>Upload the complete "online-photo-frames" folder to your web server via FTP or your preferred method.</li>
+		<li>Copy the code below and paste it into your web page between the <strong>&lt;head&gt;</strong> and <strong>&lt;/head&gt;</strong> tags:
+				<br />
+	<textarea cols="40" rows="4">&lt;?php 
+/* 	(c) 2005 www.Photoshop-Tutorial-Guide.com
+/* 	Online Photo Frames v.1.01 is FREEWARE. It may not be sold
+/* 	or distributed without the permission of www.photoshop-tutorial-guide.com.
+/* 	Please do not remove this copyright notice or the acknowledgment
+/* 	links below each frame. Thanks and enjoy!!
+
+$frames_absolute_url = "http://www.mywebsite.com";
+$frame_styles = "all"; 
+include('online-photo-frames/photo-frame.php'); 
+?&gt;</textarea></li>
+<li>Replace the <strong>$frames_absolute_url</strong> value with the absolute URL of your site. Do not add a trailing slash.</li>
+				<li>To reduce the filesize of the included stylesheet, change the <strong>$frame_styles</strong> value with the styles of frames you will be using, separated by spaces. For instance: "1 13 29".</li>
+	<li>The frame will be added around your choice of content. You can add it to images, blocks of code, anything! To add the frame, add the following PHP code before the code you want to frame:<br />
+		<textarea cols="40" rows="2">&lt;?php echo startFrame(25); ?&gt;</textarea></li>
+	<li>Next, add this after the code you want to frame:<br />
+		<textarea cols="40" rows="2">
+&lt;?php echo endFrame(25); ?&gt;
+	</textarea></li>
+	<li>Change the number in the startFrame() and endFrame() to the frame style number you want to use.</li>
+	</ol>
+	<h2>Questions or Comments?</h2>
+	<p>If you have any questions or comments about this program, feel free to e-mail us at <a href="mailto:info@photoshop-tutorial-guide.com">info@photoshop-tutorial-guide.com</a> or visit us at <a href="http://www.photoshop-tutorial-guide.com">www.photoshop-tutorial-guide.com</a>. Enjoy!</p>
+</body>
+</html>
